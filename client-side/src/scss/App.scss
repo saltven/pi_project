@@ -1,0 +1,274 @@
+$small: 250px;
+$medium: 600px;
+
+.App {
+  .fade-in {
+    text-align: left;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s;
+  }
+
+  @keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+
+  span,li {
+    font-family: 'Helvetica';
+    color: #14424D;
+    font-size: 24px;
+  }
+
+  .parent-container_home {
+    .title-container_home {
+      margin-bottom: 5em;
+      .welcome-title {
+        font-size: 50px;
+      }
+      
+      .byMe-title {
+        font-size: 36px;
+      }
+      @media screen and (max-width: $medium) {
+        .welcome-title {
+          font-size: 25px;
+        }
+
+        .byMe-title {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $medium) {
+      .title-container_home {
+        margin-bottom: 3em;
+      }
+    }
+
+    .body-container_home {
+      margin-bottom: 5em;
+      .list-container {
+        width: 80%;
+      }
+      @media screen and (max-width: $medium) {
+        .list-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .parent-container_pi {
+    .title-container_pi {
+      width: 60%;
+      margin-bottom: 5em;
+    }
+
+    .body-container_pi {
+      margin-bottom: 9.6em;
+      .formula_img {
+        margin-bottom: 5em;
+      }
+      .pi-value {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 77px;
+      }
+      @media screen and (max-width: $medium) {
+        .formula_img {
+          margin-bottom: 3em;
+        }
+        .pi-value {
+          font-size: 38px;
+          line-height: 35px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $medium) {
+      .title-container_pi {
+        width: 100%;
+        margin-bottom: 3em;
+      }
+      .body-container_pi {
+        margin-bottom: 3em;
+      }
+    }
+  }
+
+  .parent-container_sun {
+    .title-container_sun {
+      width: 60%;
+      margin-bottom: 1em;
+    }
+
+    .body-container_sun {
+      margin-bottom: 4em;
+      .assets-container_sun {
+        display: flex;
+        align-items: center;
+        .cir_img {
+          width: 20em;
+          height: 15%;
+          margin-right: 5em;
+        }
+        .sun_icon {
+          width: 13em;
+          height: 13em;
+        }
+        @media screen and (max-width: $medium) {
+          .cir_img {
+            width: 14em;
+            margin-right: 2em;
+          }
+          .sun_icon {
+            width: 5em;
+            height: 5em;
+          }
+        }
+      }
+      
+      .circum-value {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 77px;
+      }
+
+      @media screen and (max-width: $medium) {
+        .assets-container_sun {
+          margin-bottom: 3em;
+        }
+
+        .circum-value {
+          font-size: 38px;
+          line-height: 35px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $medium) {
+      .title-container_sun {
+        width: 100%;
+        margin-bottom: 3em;
+      }
+    }
+  }
+
+  footer {
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 3em;
+    span {
+      font-weight: 200;
+      font-size: 32px;
+      line-height: 39px;
+    }
+    
+    div {
+      margin-bottom: 1em;
+      display: flex;
+      align-items: center;
+      .arrow_icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+
+    .link {
+      text-decoration: none;
+    }
+
+    .link:after {
+      display:block;
+      content: '';
+      border-bottom: solid 3px #14424D;
+      transform: scaleX(0);  
+      transition: transform 500ms ease-in-out;
+      transform-origin:  0% 50%;
+    }
+
+    .link:hover:after {
+      transform: scaleX(1);
+    }
+
+    @media screen and (max-width: $medium) {
+      span {
+        font-size: 22px;
+      }
+
+      div {
+        margin-bottom: 0;
+        .arrow_icon {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+  }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media screen and (max-width: $medium) {
+    span,li {
+      font-size: 15px;
+    }
+  }
+}
+
+.master-padding {
+  padding: 10% 10%;
+}
+
+@media screen and (max-width: $medium) {
+  .master-padding {
+    padding: 7% 7%;
+  }
+}
+
+
